@@ -203,23 +203,23 @@ export class FunctionParser {
 
     switch (endpoint.requestType) {
       case RequestType.GET:
-        router.get(`/${name}`, endpoint.options?.middlewares ?? [], handler);
+        router.get(`/${groupName}/${name}`, endpoint.options?.middlewares ?? [], handler);
         break;
 
       case RequestType.POST:
-        router.post(`/${name}`, endpoint.options?.middlewares ?? [], handler);
+        router.post(`/${groupName}/${name}`, endpoint.options?.middlewares ?? [], handler);
         break;
 
       case RequestType.PUT:
-        router.put(`/${name}`, endpoint.options?.middlewares ?? [], handler);
+        router.put(`/${groupName}/${name}`, endpoint.options?.middlewares ?? [], handler);
         break;
 
       case RequestType.DELETE:
-        router.delete(`/${name}`, endpoint.options?.middlewares ?? [], handler);
+        router.delete(`/${groupName}/${name}`, endpoint.options?.middlewares ?? [], handler);
         break;
 
       case RequestType.PATCH:
-        router.patch(`/${name}`, endpoint.options?.middlewares ?? [], handler);
+        router.patch(`/${groupName}/${name}`, endpoint.options?.middlewares ?? [], handler);
         break;
 
       default:
